@@ -40,8 +40,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
+  const disableScroll = () => {
+    document.body.style.overflow = 'hidden';
+  };
+
+  const enableScroll = () => {
+    document.body.style.overflow = 'auto';
+  }
+
   useGSAP(() => {
-    const tl = gsap.timeline();
+
+    disableScroll();
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        enableScroll();
+      }
+    });
 
     tl.fromTo('.progress', {
       scaleX: 0, 
