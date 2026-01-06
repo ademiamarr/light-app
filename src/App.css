@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
-
 }
 
 .container {
@@ -143,10 +142,10 @@ body {
     border: 1px solid black;
     width: 55px;
     height: 17px;
-    margin-top: 20px;
-    margin-right: 30px;
+    top: 6%;
+    right: 3%;
     border-radius: 30px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     padding: 5px;
     border: 1px solid white;

@@ -73,8 +73,8 @@ function App() {
     });
     tl.to('.progressBar', {display: 'none'});
     tl.to('#tittle', {top: '-5%', scale: 0.5});
+    tl.fromTo('.navBar', {opacity: 0,y: '100%', width: '99.7%'}, {y: 0, opacity: 1, ease: 'power1', duration: 1})
     tl.fromTo(['.navLinksLeft', '.navLinksRight'], {display: 'none', opacity: 0, x: 0}, {display: 'flex', opacity: 1, x: 1, duration: 1})
-    tl.fromTo('.navBar', {display: 'none', opacity: 0,y: 100, width: '99.7%'}, {display: 'flex',y: 0, opacity: 1, ease: 'power1', duration: 1})
 
     return tl;
   });
@@ -87,7 +87,8 @@ function App() {
       }
     });
 
-    tl.fromTo('.section2 div', {y: 400, opacity: 0}, {y: 0, opacity: 1,duration: 2.5})
+    tl.from('.section2Top', {y: 300, opacity: 0}, {y: 0, opacity: 1, duration: 2.3})
+    tl.fromTo('.lights', {y: 400, opacity: 0}, {y: 0, opacity: 1,duration: 1.5})
 
     return tl;
   });
